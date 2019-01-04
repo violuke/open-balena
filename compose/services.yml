@@ -133,7 +133,7 @@ services:
       file: ./common.yml
       service: system
     build: ../caddy
-    depends_on:
+    link:
       - haproxy
     expose:
       - "80"
