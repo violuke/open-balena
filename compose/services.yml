@@ -133,8 +133,6 @@ services:
       file: ./common.yml
       service: system
     build: ../caddy
-    links:
-      - haproxy
     expose:
       - "80"
       - "443"
