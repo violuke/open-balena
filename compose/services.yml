@@ -128,6 +128,19 @@ services:
     volumes:
       - redis:/data
 
+  caddy:
+    extends:
+      file: ./common.yml
+      service: system
+    build: ../caddy
+    depends_on:
+      - haproxy
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      OPENBALENA_HOST_NAME: ${OPENBALENA_HOST_NAME}
+
   haproxy:
     extends:
       file: ./common.yml
@@ -141,9 +154,7 @@ services:
       - s3
       - redis
     ports:
-      - "80:80"
       - "222:222"
-      - "443:443"
       - "3128:3128"
       - "5432:5432"
       - "6379:6379"
