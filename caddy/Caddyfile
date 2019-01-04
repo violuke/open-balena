@@ -1,5 +1,2 @@
 *.{$OPENBALENA_HOST_NAME}
 proxy / haproxy:80
-tls {
-    dns cloudflare
-}
