@@ -1,0 +1,2 @@
+*.{$OPENBALENA_HOST_NAME}
+proxy / haproxy:80
