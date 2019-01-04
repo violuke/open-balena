@@ -153,6 +153,7 @@ services:
       - db
       - s3
       - redis
+      - caddy
     ports:
       - "80:80"
       - "8080:8080"
