@@ -2,4 +2,5 @@ api.{$OPENBALENA_HOST_NAME}, registry.{$OPENBALENA_HOST_NAME}, vpn.{$OPENBALENA_
 s3.{$OPENBALENA_HOST_NAME}
 proxy / haproxy:80 {
   transparent
+  header_downstream X-TEST-HOST {host}
 }
