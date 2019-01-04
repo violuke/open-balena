@@ -158,6 +158,8 @@ services:
       - "3128:3128"
       - "5432:5432"
       - "6379:6379"
+    expose:
+      - "80"
     networks:
       default:
         aliases:
