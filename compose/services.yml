@@ -135,9 +135,9 @@ services:
     build: ../caddy
     depends_on:
       - haproxy
-    ports:
-      - "80:80"
-      - "443:443"
+    expose:
+      - "80"
+      - "443"
     environment:
       OPENBALENA_HOST_NAME: ${OPENBALENA_HOST_NAME}
 
@@ -154,12 +154,13 @@ services:
       - s3
       - redis
     ports:
+      - "80:80"
+      - "8080:8080"
+      - "443:443"
       - "222:222"
       - "3128:3128"
       - "5432:5432"
       - "6379:6379"
-    expose:
-      - "80"
     networks:
       default:
         aliases:
