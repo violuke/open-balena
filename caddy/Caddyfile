@@ -1,3 +1,5 @@
 api.{$OPENBALENA_HOST_NAME}, registry.{$OPENBALENA_HOST_NAME}, vpn.{$OPENBALENA_HOST_NAME}, 
 s3.{$OPENBALENA_HOST_NAME}
-proxy / haproxy:80
+proxy / haproxy:80 {
+  transparent
+}
