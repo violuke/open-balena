@@ -1,5 +1,3 @@
 api.{$OPENBALENA_HOST_NAME}, registry.{$OPENBALENA_HOST_NAME}, vpn.{$OPENBALENA_HOST_NAME}, 
 s3.{$OPENBALENA_HOST_NAME}
-proxy / haproxy {
-  insecure_skip_verify
-}
+proxy / haproxy:80
