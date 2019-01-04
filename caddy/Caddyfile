@@ -1,2 +1,11 @@
-*.{$OPENBALENA_HOST_NAME}
+api.{$OPENBALENA_HOST_NAME}
+proxy / haproxy:80
+
+registry.{$OPENBALENA_HOST_NAME}
+proxy / haproxy:80
+
+vpn.{$OPENBALENA_HOST_NAME}
+proxy / haproxy:80
+
+s3.{$OPENBALENA_HOST_NAME}
 proxy / haproxy:80
