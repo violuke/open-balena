@@ -89,8 +89,6 @@ services:
       - api
     cap_add:
       - NET_ADMIN
-    expose:
-      - "3128"
     environment:
       API_SERVICE_API_KEY: ${OPENBALENA_API_VPN_SERVICE_API_KEY}
       BALENA_API_HOST: api.${OPENBALENA_HOST_NAME}
