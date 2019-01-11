@@ -133,6 +133,8 @@ services:
       file: ./common.yml
       service: system
     build: ../caddy
+    depends_on:
+      - haproxy
     expose:
       - "80"
       - "443"
@@ -153,6 +155,7 @@ services:
       - db
       - s3
       - redis
+    links:
       - caddy
     ports:
       - "80:80"
