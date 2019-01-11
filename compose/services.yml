@@ -140,8 +140,6 @@ services:
       - "443"
     environment:
       OPENBALENA_HOST_NAME: ${OPENBALENA_HOST_NAME}
-      CLOUDFLARE_EMAIL: ${CLOUDFLARE_EMAIL}
-      CLOUDFLARE_API_KEY: ${CLOUDFLARE_API_KEY}
 
   haproxy:
     extends:
